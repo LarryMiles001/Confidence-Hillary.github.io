@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <title>Task-1</title>
+</head>
+<body>
+    <div class="profile">
+        <h1 data-testid="slackUserName">Hillary</h1>
+
+        <img src="Hills.jpeg" alt="Confidence Hillary" data-testid="slackDisplayImage">
+
+        <p id="date" data-testid="currentDayOfTheWeek"></p>
+
+        <p id="time" data-testid="currentUTCTime"></p>
+
+        <h3 data-testid="myTrack">Frontend</h3>
+
+        <a href="https://github.com/LarryMiles001" data-testid="githubURL">For more info<iconify-icon icon="heroicons-outline:arrow-right" style="color: white;"
+            width="30" height="10"></iconify-icon></a>
+
+    </div>
+
+
+    <script>
+        Date.prototype.myMonth = function() {
+  if (this.getDay() == 1) {return "Monday"};
+  if (this.getDay() == 2) {return "Tuesday"};
+  if (this.getDay() == 3) {return "Wednesday"};
+  if (this.getDay() == 4) {return "Thursday"};
+  if (this.getDay() == 5) {return "Friday"};
+  if (this.getDay() == 6) {return "Saturday"};
+  if (this.getDay() == 7) {return "Sunday"};
+};
+
+const currentDayOfTheWeek = new Date();
+document.getElementById("date").innerHTML = currentDayOfTheWeek.myMonth();
+
+        // current UTC time
+        const currentUTCTime = Date.now();
+        document.getElementById("time"). innerHTML = currentUTCTime;
+
+        
+    </script>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
